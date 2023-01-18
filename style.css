@@ -1,0 +1,153 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: #fdeedc;
+    justify-content: space-between;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding-left: 2em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a:hover {
+    color: aqua;
+}
+
+
+main {
+    display: flex;
+    background-color: #ffd8a9;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main .content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2em;
+}
+
+main .content a {
+    text-decoration: none;
+    background-color: #fff;
+    margin-bottom: 2em;
+    text-align: center;
+    color: black;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .content a:hover {
+    box-shadow: 0 6px 20px 0px rgba(255, 255, 255, 0.3);
+}
+
+main .content figure {
+    margin: auto;
+}
+
+main .content figure img {
+    width: 100%;
+}
+
+.about {
+    padding: 2em;
+}
+
+.about section {
+    background-color: #f1a661;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.about section img {
+    width: 100%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+ .about section p {
+    padding: 1em;
+ }
+
+
+
+footer {
+    height: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e38b29;
+    padding-top: 1em;
+}
+
+footer p a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        justify-content: center;
+    }
+    
+    
+    header h1 {
+        display: none;
+    }
+
+    
+
+    header nav ul li {
+        display: flex;
+        flex-direction: row;
+        padding-left: 1em;
+        padding-right: 1em;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about section {
+        display: flex;
+        flex-direction: column;
+        background-color: #f1a661;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about section h2 {
+        margin: 3em;
+    }
+    
+    .about section img {
+        width: 150Px;
+        border-radius: 50%;
+        border: 3px solid #ffd8a9;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+}
