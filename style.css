@@ -1,3 +1,10 @@
+/* #DFF6FF
+#5D8BF4
+ #2D31FA
+ #051367*/
+
+
+
 
 body {
     margin: 0;
@@ -7,7 +14,7 @@ body {
 
 header {
     display: flex;
-    background-color: #fdeedc;
+    background-color: #051367;
     justify-content: space-between;
     padding-left: 3em;
     padding-right: 3em;
@@ -34,7 +41,7 @@ header nav ul li a:hover {
 
 main {
     display: flex;
-    background-color: #ffd8a9;
+    background-color: #5D8BF4;
     flex-direction: row;
     justify-content: center;
 }
