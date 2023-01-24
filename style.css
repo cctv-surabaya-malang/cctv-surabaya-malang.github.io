@@ -18,14 +18,19 @@ header {
 }
 
 .baliho {
-    width: fit-content;
+    /* width: fit-content; */
     height: 7em;
+    background-image: url(img/Home_Security_Systems-2573016189.jpeg);
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center;
 }
 
-.baliho img {
+/* .baliho img {
     width: 100%;
-    height: auto;
-}
+    height: 7em;
+    
+} */
 
 .head {
     display: flex;
@@ -59,7 +64,7 @@ main {
     display: flex;
     background-color: #DFF6FF;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: space-between; */
 }
 
 main .content {
