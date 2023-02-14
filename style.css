@@ -1,38 +1,79 @@
-body {
+/* #DFF6FF
+#5D8BF4
+ #2D31FA
+ #051367 */
+
+
+
+
+
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 40px;
+    background-color: #DFF6FF;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    background-color: #051367;
-    color: whitesmoke;
-    justify-content: space-between;
-    padding-left: 3em;
-    padding-right: 3em;
-}
+/* Baliho */
 
-.menu {
-    list-style: none;
-    display: flex;
-}
-
-.menu li {
-    padding-left: 2em;
-}
-
-.submenu {
-    text-decoration: none;
-    color: whitesmoke;
+.baliho {
+    display: grid;
+    grid-template-areas: 
+    'hero hero hero-cctv'
+    'hero hero hero-ap';
 }
 
 .hero {
+    grid-area: hero;
+    display: grid;
     background-image: url(img/Home_Security_Systems-2573016189.jpeg);
-    margin: auto;
-    height: 38em;
-    box-sizing: border-box;
+    min-height: 300px;
     background-size: cover;
     background-position: center;
+    place-content: center;
+    color: #051367;
+}
+
+.subhero {
+    display: grid;
+    color: white;
+    place-content: center;
+}
+
+.hero-cctv {
+    background-image: url(img/sacha-t-sas-mVPkezDvRy8-unsplash.jpg);
+    grid-area: hero-cctv;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-ap {
+    background-image: url(img/compare-fibre-hXVVNB6Qctg-unsplash.jpg);
+    grid-area: hero-ap;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navbar */
+
+.logo {
+    
+}
+
+.menu {
+    background-color: #051367;
+}
+
+
+
+
+
+footer {
+    background-color: #DFF6FF;
+    color: #5D8BF4;
 }
