@@ -17,11 +17,20 @@ body {
     font-size: 18px;
     margin: 40px;
     background-color: #DFF6FF;
+    overflow: hidden;
+}
+
+header {
+    display: grid;
+    grid-template-areas: 
+    'baliho'
+    'navbar';
 }
 
 /* Baliho */
 
 .baliho {
+    grid-area: baliho;
     display: grid;
     grid-template-areas: 
     'hero hero hero-cctv'
@@ -43,37 +52,185 @@ body {
     display: grid;
     color: white;
     place-content: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-cctv {
     background-image: url(img/sacha-t-sas-mVPkezDvRy8-unsplash.jpg);
     grid-area: hero-cctv;
-    background-size: cover;
-    background-position: center;
+    
 }
 
 .hero-ap {
     background-image: url(img/compare-fibre-hXVVNB6Qctg-unsplash.jpg);
     grid-area: hero-ap;
-    background-size: cover;
-    background-position: center;
+    
 }
 
 /* Navbar */
 
+nav {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 20px;
+    align-items: center;
+}
+
 .logo {
-    
+    color: #051367;
+    font-size: 1.8em;
+    font-weight: 900;
 }
 
 .menu {
+    
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 3px;
+    border-radius: 2px;
+}
+
+.menu li a {
     background-color: #051367;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    color: #DFF6FF;
+    font-size: 0.8em;
+}
+
+/* Hamburger menu */
+
+.toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -6px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(232, 251, 245);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+
+.toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.toggle span:nth-child(4) {
+    transform-origin: 0 100%;
 }
 
 
+.toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
 
+.toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
 
+.toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
 
-footer {
+/* footer {
     background-color: #DFF6FF;
     color: #5D8BF4;
+} */
+
+
+
+
+
+
+
+
+
+/* Responsive brakepoint Ukuran Tablet */
+
+@media screen and (max-width: 1000px) {
+    header {
+       
+        grid-template-areas: 
+        'navbar'
+        'baliho';
+    }
+    
+    
+    .baliho {
+        grid-template-areas: 
+        'hero-cctv hero-ap'
+        'hero-cctv hero-ap';
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .subhero {
+        min-height: 250px;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+/* Responsive brakepoint Ukuran Mobile */
+
+@media screen and (max-width: 576px) {
+    .menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        background-color: rgb(198, 36, 31);
+        transform: translateY(0);
+        transition: all 1s;
+        opacity: 1;
+    }
+
+    nav ul.slide {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .toggle {
+        display: flex;
+    }
 }
